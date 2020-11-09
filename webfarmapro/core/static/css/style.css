@@ -1,0 +1,17 @@
+
+body {
+    background-color:lightblue;
+    background-image: url('C:/Users/AcidByte/Desktop/portafolio_web/Entrega2_v1/FarmaPro/webfarmapro/core/static/img/fondoinicio.jpg');
+    background-size:cover;
+}
+main{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+footer{
+    background-color: #d6e0f0;
+    
+}
+#barra{
+    background-color:#f1f3f8;
+}
