@@ -1,0 +1,13 @@
+#barra{
+    background-color:#f1f3f8;
+}
+body {
+    background-color:lightblue;
+    background-image: url("/img/fondomed.jpeg");
+}
+#tarjeta-medico{
+    background-color:#d6e0f0;
+}
+#tablamed{
+    background-color:#fff;
+}

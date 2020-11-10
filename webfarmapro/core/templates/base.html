@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap-5.0.0-alpha2-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/fontawesome-free-5.15.1-web/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+   <header>
+            <nav id="barra" class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/pill3.png' %}" alt="" width="60"
+                     class="d-inline-block align-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
+                      <a class="nav-link " href="{%url 'paciente' %}">Paciente</a>
+                      <a class="nav-link " href="Medico.html">Medico</a>
+                      <a class="nav-link " href="#">Farmaceutico</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+    </header>
+        {% block content%} {% endblock %}
+        <script src="C:\Users\AcidByte\Desktop\portafolio_web\Entrega2_v1\FarmaPro\webfarmapro\core\static\vendor\bootstrap-5.0.0-alpha2-dist\js\bootstrap.bundle.min.js" ></script>
+</body>
+</html>
