@@ -21,7 +21,7 @@
                             <td>{{r.NombrePaciente}}</td>
                             <td>{{r.NombreMedicamento}}</td>
                             <td>{{r.Creacion}}</td>
-                            <td><button type="button" class="btn btn-danger btn-sm">Detalles</button></td>
+                            <td><a href="{% url 'receta' r.id %}" class="button btn btn-danger btn-sm">Detalles</a></td>
                         </tr>
                     {%endfor%}
                     </tbody>

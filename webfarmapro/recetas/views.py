@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Receta
 from .forms import formulario
 #from .forms import FiltroBusqueda
@@ -41,5 +41,5 @@ def medico(request):
     return render(request,"medico.html",{'form':form,'recetas':recetas})
 
 def DetalleReceta(request,receta_id):
-    recetas = Receta.objects.get(id= receta_id)
+    recetas = get_object_or_404(Receta,id=receta_id)
     return render(request,"ver_receta.html",{'recetas':recetas})
