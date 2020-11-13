@@ -19,6 +19,7 @@ def busqueda (request):
         recetas = Receta.objects.all().filter(RutPaciente=buscar)
         print(recetas)
         return render(request, 'receta.html',{'recetas':recetas})
+
 def medico(request):
     form = formulario()
     if request.method == "POST":

@@ -24,8 +24,8 @@
                     <div class="navbar-nav">
 
                       <a class="nav-link {%if request.path == '/'%} active {%endif%}" aria-current="page" href="{% url 'home' %}">Inicio</a>
-                      <a class="nav-link {%if request.path == '/'%} active {%endif%}" href="{%url 'paciente' %}">Paciente</a>
-                      <a class="nav-link {%if request.path == 'medico/'%} active {%endif%}" href="{%url 'medico'%}">Medico</a>
+                      <a class="nav-link {%if request.path == '/recetas/'%} active {%endif%}" href="{%url 'paciente' %}">Paciente</a>
+                      <a class="nav-link {%if request.path == '/recetas/medico/'%} active {%endif%}" href="{%url 'medico'%}">Medico</a>
                       <a class="nav-link " href="#">Farmaceutico</a>
                     </div>
                   </div>
@@ -33,6 +33,7 @@
               </nav>
     </header>
         {% block content%} {% endblock %}
-        <script src="C:\Users\AcidByte\Desktop\portafolio_web\Entrega2_v1\FarmaPro\webfarmapro\core\static\vendor\bootstrap-5.0.0-alpha2-dist\js\bootstrap.bundle.min.js" ></script>
+        <!--<script src="C:\Users\AcidByte\Desktop\portafolio_web\Entrega2_v1\FarmaPro\webfarmapro\core\static\vendor\bootstrap-5.0.0-alpha2-dist\js\bootstrap.bundle.min.js" ></script>-->
+        <script src="{% static 'vendor/bootstrap-5.0.0-alpha2-dist/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
