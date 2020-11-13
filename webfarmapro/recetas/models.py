@@ -8,7 +8,7 @@ class Receta(models.Model):
     Motivo = models.TextField(verbose_name="Motivo Prescripcion")
     Creacion = models.DateTimeField(auto_now_add=True,verbose_name="Fecha Receta")
     Estado = models.BooleanField(verbose_name="Esta Activa?", default=True)
-    Firma = models.FileField(verbose_name="Archivo Firma Electronica")
+    Firma = models.ImageField(upload_to="recetas", verbose_name="Archivo Firma Electronica")
 
     def __str__(self):
         return self.NombrePaciente + " " + self.RutPaciente

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static%}
+<link rel="stylesheet" href="{% static '/css/paciente.css' %}">
+ <main class="container-fluid">
+        <div class="col-lg col-md col-sm">
+            <div id="tarjeta" class="card">
+                <div class="card-header">
+                   <h4 class="text-white">Bienvenido/a Ingrese su rut y la acción que desee hacer</h4> 
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'busqueda'%}" method="get">
+                        <input id="rut" name="rut" class="form-control form-control-lg" type="text" placeholder="Ej. 19286743-6" aria-label=".form-control-lg example">
+                        <button id="consultar-btn" type="submit" class="btn btn-primary btn-lg btn-block text-white">Consultar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{% static 'vendor/rutjs/index.js' %}"></script>
+    <script src="{% static 'js/paciente.js' %}"></script>
+{% endblock  %}

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'vendor/fontawesome-free-5.15.1-web/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body style="background: url({% static 'img/fondoinicio.jpg' %})">
    <header>
             <nav id="barra" class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -22,9 +22,10 @@
                     </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
-                      <a class="nav-link " href="{%url 'paciente' %}">Paciente</a>
-                      <a class="nav-link " href="Medico.html">Medico</a>
+
+                      <a class="nav-link {%if request.path == '/'%} active {%endif%}" aria-current="page" href="{% url 'home' %}">Inicio</a>
+                      <a class="nav-link {%if request.path == '/'%} active {%endif%}" href="{%url 'paciente' %}">Paciente</a>
+                      <a class="nav-link {%if request.path == 'medico/'%} active {%endif%}" href="{%url 'medico'%}">Medico</a>
                       <a class="nav-link " href="#">Farmaceutico</a>
                     </div>
                   </div>

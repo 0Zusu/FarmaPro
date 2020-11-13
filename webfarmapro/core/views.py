@@ -4,5 +4,3 @@ from django.shortcuts import render,HttpResponse
 
 def home (request):
     return render(request, "index.html",{'titulo':'FarmaPro'})
-def paciente (request):
-    return render(request, "paciente.html")
